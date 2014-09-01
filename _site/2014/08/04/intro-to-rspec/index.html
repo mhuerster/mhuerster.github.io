@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Molly Huerster - Intro to RSpec</title>
+      <meta name="viewport" content="width=device-width">
+
+      <!-- syntax highlighting CSS -->
+      <link rel="stylesheet" href="/css/syntax.css">
+
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="/css/main.css">
+
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="/css/responsive.css">
+
+      <!-- Google Fonts -->
+      <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="site">
+      <div class="sidebar" id="sidebar">
+        <div class="header">
+          <h1 class="title"><a href="/"><img id="logo" src="/images/logo.png"></a></h1>
+          <span class="tagline">Molly Huerster</span>
+        </div>
+        <div class="posts">
+          <ul class="posts-list">
+            
+              <li class="post-link">
+                <a class="post-title" href="/2014/08/27/it-doesnt-go-away/">
+                  <span class="post-date">27 Aug 2014</span>
+                  It Doesn't Go Away
+                </a>
+              </li>
+            
+              <li class="post-link">
+                <a class="post-title" href="/2014/08/19/deep-dive/">
+                  <span class="post-date">19 Aug 2014</span>
+                  Deep Dive
+                </a>
+              </li>
+            
+              <li class="post-link">
+                <a class="post-title" href="/2014/08/04/shoulda-matchers/">
+                  <span class="post-date">04 Aug 2014</span>
+                  shoulda-matchers
+                </a>
+              </li>
+            
+              <li class="post-link">
+                <a class="post-title" href="/2014/08/04/intro-to-rspec/">
+                  <span class="post-date">04 Aug 2014</span>
+                  Intro to RSpec
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+        <div class="footer">
+          <span id="footer-links">
+            <a href="/about/" class="footer-link">About</a> <span class="separator">&bull;</span>
+            <a href="https://twitter.com/mhuerster" class="footer-link">Twitter</a> <span class="separator">&bull;</span>
+            <a href="https://github.com/mhuerster" class="footer-link">GitHub</a>
+          </span>
+        </div>
+      </div>
+
+        <div class="content" id="home">
+  <div id="sidebar-button">
+    <img src="/images/sidebar-button.png">
+  </div>
+  <div id="post-info">
+    <div id="cover-photo-container">
+      <img id="cover-photo" src="/images/cover.jpg">
+    </div>
+    <div id="info-container">
+      <h1 id="title">Intro to RSpec</h1>
+      <span id="date">04 Aug 2014</span>
+    </div>
+  </div>
+
+  <div class="post">
+    <p>I’ve run RSpec tests for exercises a few times before, but this weekend was the first time I tried writing my own tests. It’s a DBC tradition for the outgoing Phase 2 students to help teach ActiveRecord to the incoming cohort, and I was part of the group leading a weekend workshop.</p>
+
+<p>My role was to prepare a (relatively simple) exercise for the new Phase 2 students to practice their skills on after the talk. Because the cohort before mine had already written great exercises (thanks, Woodchucks!), I decided not to reinvent the wheel, but instead to improve on one of the existing challenges by making it test-driven.</p>
+
+<p>The object of the challenge was to implement a many-to-many relationship between a car rental service’s cars and its customers - i.e. a customer can rent many cars, and a car can be rented by many customers.</p>
+
+<p>I used the RSpec documentation and previous exercises I’d been given to get a feel for RSpec 3.0 syntax. Here’s a short, annotated sample:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno"> 1</span> <span class="c1"># require the file that the spec file should test</span>
+<span class="lineno"> 2</span> <span class="n">require_relative</span> <span class="s1">&#39;rentals&#39;</span>
+<span class="lineno"> 3</span> <span class="c1"># identify the class being tested</span>
+<span class="lineno"> 4</span> <span class="n">describe</span> <span class="no">User</span> <span class="k">do</span>
+<span class="lineno"> 5</span> 	<span class="c1"># open the test block (&quot;it...do&quot;) and explain in concise, plain English what behavior is being tested</span>
+<span class="lineno"> 6</span> 	<span class="n">it</span> <span class="s1">&#39;has many cars&#39;</span> <span class="k">do</span>
+<span class="lineno"> 7</span> 		<span class="c1"># create an instance of the class to test</span>
+<span class="lineno"> 8</span> 		<span class="n">sam</span> <span class="o">=</span> <span class="no">User</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;Sam&#39;</span><span class="p">,</span>
+<span class="lineno"> 9</span> 			<span class="ss">state</span><span class="p">:</span> <span class="s1">&#39;DC&#39;</span><span class="p">,</span>
+<span class="lineno">10</span> 			<span class="ss">age</span><span class="p">:</span> <span class="mi">26</span><span class="p">)</span>
+<span class="lineno">11</span> 		<span class="c1"># give the expected behavior in RSpec - i.e., this instance of the class User should respond to the method #cars</span>
+<span class="lineno">12</span> 		<span class="n">expect</span><span class="p">(</span><span class="n">sam</span><span class="p">)</span><span class="o">.</span><span class="n">to</span> <span class="n">respond_to</span> <span class="ss">:cars</span>
+<span class="lineno">13</span> 	<span class="k">end</span>	
+<span class="lineno">14</span> 	<span class="c1"># mark a test as pending using &quot;xit&quot; to indicate that it shouldn&#39;t be run immediately</span>
+<span class="lineno">15</span> 	<span class="c1"># stretch - uncomment to run the test</span>
+<span class="lineno">16</span> 	<span class="n">xit</span> <span class="s1">&#39;must be 25 or older&#39;</span> <span class="k">do</span>
+<span class="lineno">17</span> 		<span class="n">molly</span> <span class="o">=</span> <span class="no">User</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;Molly&#39;</span><span class="p">,</span> <span class="ss">state</span><span class="p">:</span> <span class="s1">&#39;NY&#39;</span><span class="p">,</span> <span class="ss">age</span><span class="p">:</span> <span class="mi">23</span><span class="p">)</span>
+<span class="lineno">18</span> 		<span class="n">expect</span><span class="p">(</span><span class="n">molly</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">messages</span><span class="o">[</span><span class="ss">:age</span><span class="o">]</span><span class="p">)</span><span class="o">.</span><span class="n">to</span> <span class="kp">include</span><span class="p">(</span><span class="s1">&#39;must be greater than or equal to 25&#39;</span><span class="p">)</span>
+<span class="lineno">19</span> 	<span class="k">end</span>
+<span class="lineno">20</span> <span class="k">end</span></code></pre></div>
+
+<p>After working through the exercise with a few of the new Phase 2 students, I realized that the tests I had written weren’t bad, but there was room for improvement. For example, I had written a test that made sure instances of a class responded to the correct method, but I didn’t test what the method returned. This allowed all the tests to pass even if the student’s associations were incorrect. As I move on with RSpec and TDD, I’ll definitely have be more thorough. I enjoyed my first dive into testing, though, and I’m looking forward to learning more!</p>
+
+  </div>
+  <div class="colophon">
+    <p>
+      <span id="pub-date">Published on 04 Aug 2014</span> <span class="separator">&bull;</span>
+      <span id="social">Find me on <a href="https://twitter.com/mhuerster">Twitter</a>!</span>
+    </p>
+  </div>
+</div>
+
+
+
+    </div>
+    <script src="/scripts/responsive.js" type="text/javascript"></script>
+  </body>
+</html>

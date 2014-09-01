@@ -1,0 +1,13 @@
+# Site settings
+title: Molly Huerster
+email: mary.huerster@gmail.com
+description: "I'm a recent graduate of Washington & Lee and more recent gradaute of Dev Bootcamp. Life is good."
+baseurl: ""
+url: "http://yourdomain.com"
+twitter_username: mhuerster
+github_username:  mhuerster
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+paginate: 10

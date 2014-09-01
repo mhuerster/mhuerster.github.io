@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Molly Huerster - Deep Dive</title>
+      <meta name="viewport" content="width=device-width">
+
+      <!-- syntax highlighting CSS -->
+      <link rel="stylesheet" href="/css/syntax.css">
+
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="/css/main.css">
+
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="/css/responsive.css">
+
+      <!-- Google Fonts -->
+      <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="site">
+      <div class="sidebar" id="sidebar">
+        <div class="header">
+          <h1 class="title"><a href="/"><img id="logo" src="/images/logo.png"></a></h1>
+          <span class="tagline">Molly Huerster</span>
+        </div>
+        <div class="posts">
+          <ul class="posts-list">
+            
+              <li class="post-link">
+                <a class="post-title" href="/2014/08/27/it-doesnt-go-away/">
+                  <span class="post-date">27 Aug 2014</span>
+                  It Doesn't Go Away
+                </a>
+              </li>
+            
+              <li class="post-link">
+                <a class="post-title" href="/2014/08/19/deep-dive/">
+                  <span class="post-date">19 Aug 2014</span>
+                  Deep Dive
+                </a>
+              </li>
+            
+              <li class="post-link">
+                <a class="post-title" href="/2014/08/04/shoulda-matchers/">
+                  <span class="post-date">04 Aug 2014</span>
+                  shoulda-matchers
+                </a>
+              </li>
+            
+              <li class="post-link">
+                <a class="post-title" href="/2014/08/04/intro-to-rspec/">
+                  <span class="post-date">04 Aug 2014</span>
+                  Intro to RSpec
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+        <div class="footer">
+          <span id="footer-links">
+            <a href="/about/" class="footer-link">About</a> <span class="separator">&bull;</span>
+            <a href="https://twitter.com/mhuerster" class="footer-link">Twitter</a> <span class="separator">&bull;</span>
+            <a href="https://github.com/mhuerster" class="footer-link">GitHub</a>
+          </span>
+        </div>
+      </div>
+
+        <div class="content" id="home">
+  <div id="sidebar-button">
+    <img src="/images/sidebar-button.png">
+  </div>
+  <div id="post-info">
+    <div id="cover-photo-container">
+      <img id="cover-photo" src="/images/cover.jpg">
+    </div>
+    <div id="info-container">
+      <h1 id="title">Deep Dive</h1>
+      <span id="date">19 Aug 2014</span>
+    </div>
+  </div>
+
+  <div class="post">
+    <p>We’re six days into final projects at Dev Bootcamp, and at the risk of jinxing it, I think things are going pretty well. That definitely doesn’t mean things are easy. After seven and a half weeks of Ruby-heavy web development, my team and I decided to make the leap into mobile with an iPhone app for CitiBike navigation. (See below for more details about the product.) Since last Wednesday, we’ve had the opportunity to work with a slough of unfamiliar technologies, from geolocation to XCode. One of the most exciting aspects of the project has been our immersion in Objective-C.</p>
+
+<p>I hit my first major roadblock yesterday. One of the quirks of our project is that our “back end,” to the extent that we have one, is the station data provided by CitiBike. This includes bike stations addresses, latitude and longitude coordinates, number of bikes remaining, total number of bike docks at the location, etc. While CitiBike does make this data freely available to developers, they do not currently provide an API, so we get our information via a plain vanilla HTTP GET request to <a href="http://www.citibikenyc.com/stations/json">this URL</a>, which is updated roughly once per minute. My task yesterday morning - after our MVP demo - was to optimize our app’s loading time by caching CitiBike’s response to our first HTTP request, so that we would not have to make the other two. (We did consider the fact that our cached data would technically be invalid after a minute. However, since our users are only likely to keep the app open for a few minutes at a time, we decided that the improvement in speed would be worth that risk.) An added twist to the problem was the fact that CitiBike’s HTTP response omits Cache-Control headers.</p>
+
+<p>See the response to this curl request:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>curl -i http://www.citibikenyc.com/stations/json
+HTTP/1.1 <span class="m">200</span> OK
+Date: Wed, <span class="m">27</span> Aug <span class="m">2014</span> 02:19:37 GMT
+Server: Apache/2.2.15 <span class="o">(</span>Red Hat<span class="o">)</span>
+X-Powered-By: PHP/5.4.30
+Set-Cookie: <span class="nv">ci_csrf_token</span><span class="o">=</span>0fa63e2d37ccd1bf99c205a6bc3644c2<span class="p">;</span> <span class="nv">path</span><span class="o">=</span>/
+Set-Cookie: <span class="nv">ci_csrf_token</span><span class="o">=</span>0fa63e2d37ccd1bf99c205a6bc3644c2<span class="p">;</span> <span class="nv">path</span><span class="o">=</span>/
+Set-Cookie: <span class="nv">ci_csrf_token</span><span class="o">=</span>ae1b2bdabc98e03f0553574cffe53270<span class="p">;</span> <span class="nv">path</span><span class="o">=</span>/
+Set-Cookie: <span class="nv">ci_session</span><span class="o">=</span>VWFTbABkCTMFfFUmUWtRYlc9AW1UIgZyUTcCdVUnA2xdYlVoDAIHOFBhBiEGbQBzU2sCMVVnU2sAeAdpAmdXZFYzUjcHMFQxAmpbalY0BmJVNFNnADYJPQUzVWJRZ1FkVzoBNlQ5BjZRMwI0VWIDZF07VWMMawdiUDUGIQZtAHNTawIzVWVTawB4BzgCJlcPVjRSMgdiVCACN1t7VnQGclU7UyUAagk4BTRVb1FzUWRXPAF5VDEGOVFhAihVZQM1XThVKAxrB2ZQJwY4BiUAOlNgAjJVb1NzAC8HIgIzVyJWClI3B2FUNwI8W3xWJQZrVXNTbABhCTgFPVV3UTJRJld%2FATtULwY2UXwCNVVkAytdPVUkDGYHIlA%2FBjIGZQA6U3MCblU0UyIALgcOAjdXM1YhUj8HcFQ7AiZbcVYlBmtVaVNsAGEJPQU3VWxRYFFjVzgBblQ3BjZRaQJ7<span class="p">;</span> <span class="nv">path</span><span class="o">=</span>/<span class="p">;</span> httponly
+x-version: 1.0
+Last-Modified: Wed, <span class="m">27</span> Aug <span class="m">2014</span> 02:19:01 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: application/json</code></pre></div>
+
+<p>As a result, a feature that I thought would be solved with a relatively simple implementation of Objective-C’s basic NSURLCache necessitated a deep dive into a wide variety of approaches to caching in Objective-C.</p>
+
+<p>My first idea was to simply ignore the absence of a Cache-Control header and work by the Last-Modified header instead. When that failed, I attempted to manipulate the incoming HTTP response to fake a Cache-Control header, using <a href="http://www.hpique.com/2014/03/how-to-cache-server-responses-in-ios-apps/">this blog post</a> as a guide. That tactic didn’t fail, but it also didn’t solve my problem. I found that I was able to cache the incoming data fairly easily; a pair of NSLogs revealed an empty cache when the app launched, and occupied memory in the cache immediately after a successful HTTP request. Accessing the data later was more difficult, especially because at least three view controllers relied on its information. I considered a number of other solutions, including the use of a global variable (shudders!) and/or saving the data to disk. Finally, however, I settled on the simplest solution that occurred to me: an array set as a property of the App Delegate. This approach met the project’s needs and led me to learn about Objective C’s delegate protocol, which was a fascinating experience in and of itself.</p>
+
+<p>This challenge was one of the most rewarding experiences I’ve had yet in coding. While perhaps not the most technically difficult issue I’ve encountered, it required more research and far more trial and error than most problems I’ve solved so far. It also helped me understand how critically important team dynamic is to the success or failure of a project. After a day of hacking away at this with very little success and even less sleep, I was frustrated and exahusted. I can’t imagine how frustrated I would have felt without my teammates’ suport - words of encouragement, offers to pair, and occasional reminders to step away from the computer. I’m incredibly lucky to be working with these people: all three of them are talented programmers, hard workers, reliable team members and truly kind people. I’m beginning to understand why Dev Bootcamp places so much emphasis on engineering empathy: I would love to have coworkers like these for the rest of my career, and I certainly intend to be one wherever I end up working.</p>
+
+  </div>
+  <div class="colophon">
+    <p>
+      <span id="pub-date">Published on 19 Aug 2014</span> <span class="separator">&bull;</span>
+      <span id="social">Find me on <a href="https://twitter.com/mhuerster">Twitter</a>!</span>
+    </p>
+  </div>
+</div>
+
+
+
+    </div>
+    <script src="/scripts/responsive.js" type="text/javascript"></script>
+  </body>
+</html>
