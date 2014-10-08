@@ -11,7 +11,10 @@ github_username:  mhuerster
 markdown: kramdown
 permalink: pretty
 paginate: 10
-comments: true
+comments :
+  provider : disqus
+  disqus :
+    short_name : mhuerster
 analytics :
   provider : google
   google : 
