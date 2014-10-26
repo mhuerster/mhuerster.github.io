@@ -3,6 +3,7 @@ layout: post
 title:  "Intro to RSpec"
 date:   2014-08-04 21:21:32
 cover: cover.jpg
+description: Learning RSpec and using TDD to teach ActiveRecord to Ruby on Rails students
 ---
 
 I've run RSpec tests for exercises a few times before, but this weekend was the first time I tried writing my own tests. It's a DBC tradition for the outgoing Phase 2 students to help teach ActiveRecord to the incoming cohort, and I was part of the group leading a weekend workshop.
