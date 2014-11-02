@@ -3,6 +3,7 @@ layout: post
 title:  "It Doesn't Go Away"
 date:   2014-08-27 17:55:42
 cover: cover.jpg
+tags: personal
 ---
 
 I'm not a big TV-watcher, but I love the West Wing. (I was a politics major in college, and even though I'm not working in the field, I guess old habits die hard.) One of my favorite scenes is from the pilot episode: it's been a tough day at the White House, everyone is frazzled, and the president is about to give a speech on national television. [As the speech starts][youtube], a new hire is visibly awed by the gravity of the moment and whispers "I've never felt like this before." A more experienced staffer responds "It doesn't go away."
