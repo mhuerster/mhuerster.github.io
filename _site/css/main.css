@@ -21,7 +21,7 @@ body {
   font-family: 'Helvetica', Arial, sans-serif;
   font-weight: 400;
   font-size: 0.85em;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 a {
@@ -315,4 +315,8 @@ a:hover {
   margin-top: 1.25em;
   font-size: 0.95em;
   color: #777;
+}
+#signature {
+  font-family: 'Stalemate', serif;
+  font-size: 1.5em;
 }
