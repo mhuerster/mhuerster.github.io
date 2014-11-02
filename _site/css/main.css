@@ -267,7 +267,6 @@ a:hover {
 
 .post-link {
   margin-bottom: 0.75em;
-  /*margin-left: auto;*/
   margin-right: 10%;
 }
 
@@ -280,7 +279,6 @@ a:hover {
 .post-date {
   color: #8a8a8a;
   font-family: 'Forum', serif;
-  /*font-family: Monaco, "Courier New", monospace;*/
   font-weight: 600;
   font-size: 0.65em;
   display: block;
