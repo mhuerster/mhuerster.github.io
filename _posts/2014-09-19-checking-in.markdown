@@ -3,6 +3,7 @@ layout: post
 title:  "Checking In"
 date:   2014-09-19 16:52:36
 cover: cover.jpg
+tags: personal opensource responsiveness gem fauxster
 ---
 
 It's been almost a month since I left DBC, but it feels like a lot longer. I've been catching up with a lot of friends and family I missed while I was in my coding cocoon (i.e. DBC), traveling cross-country, and working on some side projects.
