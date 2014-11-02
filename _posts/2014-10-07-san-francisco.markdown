@@ -3,6 +3,7 @@ layout: post
 title:  "Welcome to San Francisco"
 date:   2014-10-07 20:39:40
 cover: cover.jpg
+tags: angularjs javascript railsbridge opensource meetup personal
 ---
 
 After a (very) long and adventure-filled road trip, I'm in San Francisco! I've been having a great time getting to know the city, meeting new people and spending more time coding.
