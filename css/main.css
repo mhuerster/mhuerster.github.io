@@ -272,6 +272,7 @@ a:hover {
 }
 
 .post-title {
+  font-family: 'Lato', 'Helvetica Neue', sans-serif;
   font-weight: 600;
   font-size: 1.25em;
   text-transform: uppercase;
