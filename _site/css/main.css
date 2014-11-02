@@ -60,11 +60,12 @@ h2 {
 #logo {
   display: inline-block;
   /*max-width: 20%;*/
-  max-height: 128px;
+  max-height: 200px;
   border-radius: 50%;
   float: left;
   margin: 1em;
   vertical-align: top;
+  border: 1px solid gray;
 }
 
 .posts a {
