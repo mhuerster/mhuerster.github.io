@@ -1,7 +1,33 @@
 ---
 layout: post
 title:  "Redesign"
-date:   2014-08-04 20:19:12
+date:   2014-11-01 20:19:12
 cover: cover.jpg
 description: I've done a little redesign on my blog. The comments section is visible now, but the big changes are in the typesetting.
 ---
+
+A few weeks ago, I heard a great [talk][dbcx] by [Miki Setlur][miki-setlur] on design for developers. Ever since, I've been meaning to redesign my blog to reflect the principles I learned from him and the resources he recommended. It's certainly still a work in progress, but I like to think this is an improvement!
+
+[dbcx]: http://www.meetup.com/DBCx-SF-Dev-Bootcamp-San-Francisco-Open-Learning/events/206446782/
+[miki-setlur]: https://twitter.com/mikisetlur
+
+One of the most commonly repeated truisms about great design is that it's ["99 percent invisible"][99pi]. In keeping with that principle, I focused more on the negative space of my pages. Mostly, this meant allowing myself more white space between blocks of text. I also decided to replace my old header image with a simple blue background for a cleaner, less busy look. Because I did really love the picture, I used [ColorZilla][colorzilla] to match the blue of my header to the blue of the picture's sky.
+
+[99pi]: http://99percentinvisible.org/
+[colorzilla]: http://www.colorzilla.com/
+
+Before the redesign, I was using [Flex][flex], a stock Jekyll theme, to style the blog. Flex was great, especially for its built-in responsiveness, but once I had decided to elimiate the cover photo, I couldn't use it in its original state anymore. So, since I had to modify the theme anyway, I did a little restructuring while I was at it. I moved the comments section into a more natural spot relative to post content. (Full disclosure: the comments section was actually 100% hidden before. Oops. Just about anything is a "more natural spot" than invisible.) I also got rid of a few extraneous borders, cleaned up the link styling, and added a "signature" to each blog post. (Too cute? It may not last...)
+
+[flex]: http://jekyllthemes.org/themes/flex/
+
+What I was most excited about, though, was changing the blog's fonts. Easily the most valuable resource Miki suggested was [Hack Design][hackdesign], a crash course in design (mostly visual/web oriented) broken up into easily-digestible chunks and delivered via email each week. The lesson on [typography][dive-into-typography] really captured my imagination, and that was what finally inspired me to execute my redesign plans. After wasting far too much time trying to get perfect scores on the [letter shaping][shaping] and [kerning][kerning] exercises, I got started.
+
+[shaping]: http://shape.method.ac/
+[kerning]: http://type.method.ac/
+
+I started by examining the sample texts closely and comparing them to my own page. One of the biggest differences I noticed was that all the fonts on my blog looked incredibly similar, if not exactly the same, while the sample texts went for much bolder mixes. (Sometimes even in the same line! Heavens!) I was afraid of making it look disorganized, but in fact, my perfectly uniform text just looked bland. Encouraged by Hack Design, I experimented with a few different combinations of serif and sans-serif fonts in various sizes and weights, and eventually settled on what you see now. I'm much happier with this variety, and I chose relatively conservative fonts to keep the page from feeling mismatched.
+
+[hackdesign]: https://hackdesign.org/
+[dive-into-typography]: https://hackdesign.org/lessons/2
+
+I'll probably continue to do a little tweaking as I go; design is (obviously) a huge field, and I have so much more to learn. Meanwhile, check out that shiny new comments box. You know, the one that was there the whole time, just invisible.

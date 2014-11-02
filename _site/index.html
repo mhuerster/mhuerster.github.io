@@ -40,6 +40,13 @@
           <ul class="posts-list">
             
               <li class="post-link">
+                <a class="post-title" href="/2014/11/01/blog-redesign/">
+                  <span class="post-date">01 Nov 2014</span>
+                  Redesign
+                </a>
+              </li>
+            
+              <li class="post-link">
                 <a class="post-title" href="/2014/10/07/san-francisco/">
                   <span class="post-date">07 Oct 2014</span>
                   Welcome to San Francisco
@@ -81,13 +88,6 @@
                 </a>
               </li>
             
-              <li class="post-link">
-                <a class="post-title" href="/2014/08/04/blog-redesign/">
-                  <span class="post-date">04 Aug 2014</span>
-                  Redesign
-                </a>
-              </li>
-            
           </ul>
         </div>
         <div class="footer">
@@ -113,27 +113,29 @@
       <img id="cover-photo" src="/images/cover.jpg">
     </div> -->
     <div id="info-container">
-      <h1 id="title">Welcome to San Francisco</h1>
-      <span id="date">07 Oct 2014</span>
+      <h1 id="title">Redesign</h1>
+      <span id="date">01 Nov 2014</span>
     </div>
   </div>
 
   <div class="post">
-    <p>After a (very) long and adventure-filled road trip, I’m in San Francisco! I’ve been having a great time getting to know the city, meeting new people and spending more time coding.</p>
+    <p>A few weeks ago, I heard a great <a href="http://www.meetup.com/DBCx-SF-Dev-Bootcamp-San-Francisco-Open-Learning/events/206446782/">talk</a> by <a href="https://twitter.com/mikisetlur">Miki Setlur</a> on design for developers. Ever since, I’ve been meaning to redesign my blog to reflect the principles I learned from him and the resources he recommended. It’s certainly still a work in progress, but I like to think this is an improvement!</p>
 
-<p>I’ve been teaching myself AngularJS off and on over the past week or so, and really enjoying it. I’ve mostly been making little sandbox things for myself, but once I’ve built something more useful with it, I’ll post a link here.</p>
+<p>One of the most commonly repeated truisms about great design is that it’s <a href="http://99percentinvisible.org/">“99 percent invisible”</a>. In keeping with that principle, I focused more on the negative space of my pages. Mostly, this meant allowing myself more white space between blocks of text. I also decided to replace my old header image with a simple blue background for a cleaner, less busy look. Because I did really love the picture, I used <a href="http://www.colorzilla.com/">ColorZilla</a> to match the blue of my header to the blue of the picture’s sky.</p>
 
-<p>I’m even happier to have dipped back into Rails over the weekend. I went to a Women Who Code meetup last Saturday and spent a few hours working on BridgeTroll, RailsBridge’s open-source event management app. I paired up with a more established group member to start building attendance-tracking functionality. We were able to achieve a very rough solution to the problem by the end of the day, and would have had a more sophisticated one except that we ran into trouble trying to convert between ActiveRecord’s DateTime and Ruby’s <code>Time.now</code>. Eventually, we’re hoping to get a lot more granularity - filtering by type of event, day of the week, etc. I’d also really like to add some data visualization, maybe with <a href="http://www.chartjs.org">Chart.js</a> or <a href="http://www.highcharts.com">Highcharts</a>.</p>
+<p>Before the redesign, I was using <a href="http://jekyllthemes.org/themes/flex/">Flex</a>, a stock Jekyll theme, to style the blog. Flex was great, especially for its built-in responsiveness, but once I had decided to elimiate the cover photo, I couldn’t use it in its original state anymore. So, since I had to modify the theme anyway, I did a little restructuring while I was at it. I moved the comments section into a more natural spot relative to post content. (Full disclosure: the comments section was actually 100% hidden before. Oops. Just about anything is a “more natural spot” than invisible.) I also got rid of a few extraneous borders, cleaned up the link styling, and added a “signature” to each blog post. (Too cute? It may not last…)</p>
 
-<p>I’m typing this on my way back from an Autodesk tech talk, which was, to quote a fellow attendee, “mindblowing.” They’re doing incredible things over there. The section of the talk on augmented reality was the most impressive to me, as well as the fact that they’re making this technology increasingly accessible to individual consumers. It was great to be reminded that tech is so much bigger than just web development: it’s easy to focus on my little corner of the world and forget how much else is going on, and this event really helped me take off my blinkers.</p>
+<p>What I was most excited about, though, was changing the blog’s fonts. Easily the most valuable resource Miki suggested was <a href="https://hackdesign.org/">Hack Design</a>, a crash course in design (mostly visual/web oriented) broken up into easily-digestible chunks and delivered via email each week. The lesson on <a href="https://hackdesign.org/lessons/2">typography</a> really captured my imagination, and that was what finally inspired me to execute my redesign plans. After wasting far too much time trying to get perfect scores on the <a href="http://shape.method.ac/">letter shaping</a> and <a href="http://type.method.ac/">kerning</a> exercises, I got started.</p>
 
-<p>I’ve only been in SF for a few days, but I’ve already learned so much and met some great people. Here’s to more!</p>
+<p>I started by examining the sample texts closely and comparing them to my own page. One of the biggest differences I noticed was that all the fonts on my blog looked incredibly similar, if not exactly the same, while the sample texts went for much bolder mixes. (Sometimes even in the same line! Heavens!) I was afraid of making it look disorganized, but in fact, my perfectly uniform text just looked bland. Encouraged by Hack Design, I experimented with a few different combinations of serif and sans-serif fonts in various sizes and weights, and eventually settled on what you see now. I’m much happier with this variety, and I chose relatively conservative fonts to keep the page from feeling mismatched.</p>
+
+<p>I’ll probably continue to do a little tweaking as I go; design is (obviously) a huge field, and I have so much more to learn. Meanwhile, check out that shiny new comments box. You know, the one that was there the whole time, just invisible.</p>
 
     <span id="signature">Molly Huerster</span><br>
   </div>
   <div class="colophon">
     <p>
-      <span id="pub-date">Published on 07 Oct 2014</span> <span class="separator">&bull;</span>
+      <span id="pub-date">Published on 01 Nov 2014</span> <span class="separator">&bull;</span>
       <span id="social">Find me on <a href="https://twitter.com/mhuerster">Twitter</a>!</span>
     </p>
   </div>
