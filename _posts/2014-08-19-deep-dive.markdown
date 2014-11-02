@@ -3,6 +3,7 @@ layout: post
 title:  "Deep Dive"
 date:   2014-08-19 20:42:30
 cover: cover.jpg
+tags: dbc mobile objective-c caching api json http agile engineering-empathy
 ---
 
 We're six days into final projects at Dev Bootcamp, and at the risk of jinxing it, I think things are going pretty well. That definitely doesn't mean things are easy. After seven and a half weeks of Ruby-heavy web development, my team and I decided to make the leap into mobile with an iPhone app for CitiBike navigation. (See below for more details about the product.) Since last Wednesday, we've had the opportunity to work with a slough of unfamiliar technologies, from geolocation to XCode. One of the most exciting aspects of the project has been our immersion in Objective-C.
