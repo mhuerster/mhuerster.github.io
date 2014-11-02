@@ -4,6 +4,7 @@ title:  "Redesign"
 date:   2014-11-01 20:19:12
 cover: cover.jpg
 description: I've done a little redesign on my blog. The comments section is visible now, but the big changes are in the typesetting.
+tags: design typography responsiveness font redesign
 ---
 
 A few weeks ago, I heard a great [talk][dbcx] by [Miki Setlur][miki-setlur] on design for developers. Ever since, I've been meaning to redesign my blog to reflect the principles I learned from him and the resources he recommended. It's certainly still a work in progress, but I like to think this is an improvement!
