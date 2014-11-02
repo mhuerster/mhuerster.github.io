@@ -42,6 +42,15 @@ a:hover {
 .separator {
   color: #555;
 }
+h2 {
+  font-family: 'Playfair Display', serif;
+  /*vertical-align: middle;*/
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  color: white;
+  font-size: 4em;
+}
 
 /*****************************************************************************/
 /*
@@ -49,7 +58,13 @@ a:hover {
 /*
 /*****************************************************************************/
 #logo {
-  max-width: 128px;
+  display: inline-block;
+  /*max-width: 20%;*/
+  max-height: 128px;
+  border-radius: 50%;
+  float: left;
+  margin: 1em;
+  vertical-align: top;
 }
 
 .posts a {
@@ -87,6 +102,19 @@ a:hover {
   line-height: 25px;
 }
 
+.site-header {
+  /*background-image: url('/images/cover.jpg');*/
+  background-color: gray;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: auto;
+  border: 1px solid #e7e7e7;
+  margin-bottom: 1em;
+  /*padding-top: 1.5em;*/
+  /*padding-bottom: 1.25em;*/
+  clear: both;
+}
 .tagline {
   width: 100%;
   color: #787878;
@@ -231,12 +259,6 @@ a:hover {
 
 .content {
   padding-left: 2.125em;
-}
-
-.header {
-  text-align: center;
-  padding-top: 2.5em;
-  font-size: 1.1em;
 }
 
 .post-link {
