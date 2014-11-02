@@ -135,6 +135,7 @@ a:hover {
 .footer {
   font-size: 0.95em;
   border-top: 1px solid #e7e7e7;
+  font-family: 'Josefin Slab', serif;
   padding-top: 1.25em;
   padding-bottom: 1.5em;
   overflow: hidden;
@@ -309,6 +310,7 @@ a:hover {
   margin-top: 1.5em;
   margin-bottom: 1.45em;
   border-top: 1px dotted #e7e7e7;
+  font-family: 'Josefin Slab', serif;
 }
 
 .colophon p {
@@ -318,7 +320,7 @@ a:hover {
 }
 #signature {
   font-family: 'Stalemate', serif;
-  font-size: 1.5em;
+  font-size: 2.25em;
 }
 
 /*****************************************************************************/
