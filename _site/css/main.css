@@ -58,7 +58,7 @@ a:hover {
 }
 #site-title {
   display: inline-block;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Vollkorn', sans-serif;
   text-align: center;
   font-size: 10vw;
   vertical-align: middle;
@@ -154,7 +154,8 @@ a:hover {
 #date {
   font-size: 16px;
   padding-top: 0.25em;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
+  margin-top: 3em;
   text-transform: uppercase;
   font-weight: 600;
   color: #787878;
@@ -170,8 +171,9 @@ a:hover {
 }
 
 #title {
+  font-family: 'Lato';
   color: #4a4a4a;
-  margin-bottom: 0.35em;
+  margin-bottom: 1em;
   font-size: 3em;
   line-height: 40px;
   text-transform: uppercase;
@@ -179,8 +181,10 @@ a:hover {
 
 .post {
   line-height: 24px;
+  font-family: 'Vollkorn', serif;
   /*max-width: 725px;*/
   margin-right: 3%;
+  margin-top: 0.75em;
   clear: both;
 }
 
@@ -192,7 +196,8 @@ a:hover {
 
 .post a,
 #about a {
-  border-bottom: 1px solid #8085C1;
+  /*border-bottom: 1px solid #8085C1;*/
+  font-weight: bold;
 }
 
 .post a:hover {
@@ -207,7 +212,7 @@ a:hover {
 }
 
 .post p {
-  font-family: 'Source Sans Pro', Arial, sans-serif;
+  /*font-family: 'Source Sans Pro', Arial, sans-serif;*/
   font-size: 17px;
   margin-bottom: 1.45em;
   text-align: justify;
