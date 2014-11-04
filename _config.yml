@@ -19,3 +19,7 @@ analytics :
   provider : google
   google : 
       tracking_id : 'UA-52147811-1'
+
+# Gemfile
+gems:
+	- jekyll-sitemap
