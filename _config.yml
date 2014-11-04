@@ -22,4 +22,4 @@ analytics :
 
 # Gemfile
 gems:
-	- jekyll-sitemap
+  - jekyll-sitemap

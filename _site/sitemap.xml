@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+  <url>
+    <loc>http:mhuerster.github.io/2014/11/01/blog-redesign/</loc>
+    <lastmod>2014-11-01T13:19:12-07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http:mhuerster.github.io/2014/10/07/san-francisco/</loc>
+    <lastmod>2014-10-07T13:39:40-07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http:mhuerster.github.io/2014/09/19/checking-in/</loc>
+    <lastmod>2014-09-19T09:52:36-07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http:mhuerster.github.io/2014/08/27/it-doesnt-go-away/</loc>
+    <lastmod>2014-08-27T10:55:42-07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http:mhuerster.github.io/2014/08/19/deep-dive/</loc>
+    <lastmod>2014-08-19T13:42:30-07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http:mhuerster.github.io/2014/08/04/shoulda-matchers/</loc>
+    <lastmod>2014-08-04T14:21:32-07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http:mhuerster.github.io/2014/08/04/intro-to-rspec/</loc>
+    <lastmod>2014-08-04T14:21:32-07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  <url>
+    <loc>http:mhuerster.github.io/about/</loc>
+    <lastmod>2014-11-04T13:22:11-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http:mhuerster.github.io/</loc>
+    <lastmod>2014-11-04T13:22:11-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  
+  <url>
+    <loc>http:mhuerster.github.io/googled00421c5b0969804.html</loc>
+    <lastmod>2014-11-04T13:09:52Z</lastmod>
+    <priority>0.6</priority>
+  </url>
+  
+</urlset>
