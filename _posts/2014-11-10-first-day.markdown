@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Redesign"
+date:   2014-11-11 09:09:37
+cover: cover.jpg
+description: My first day of work - mentoring, independence, asking lots of questions.
+---
+
+Yesterday was my first "official" day of work.
