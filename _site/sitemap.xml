@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http:mhuerster.github.io/2014/11/21/thanks-matz/</loc>
+    <lastmod>2014-11-21T13:35:00-08:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http:mhuerster.github.io/2014/11/01/blog-redesign/</loc>
     <lastmod>2014-11-01T13:19:12-07:00</lastmod>
     <priority>0.8</priority>
@@ -47,14 +53,14 @@
   
   <url>
     <loc>http:mhuerster.github.io/about/</loc>
-    <lastmod>2014-11-04T13:59:50-08:00</lastmod>
+    <lastmod>2014-11-22T15:13:00-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http:mhuerster.github.io/</loc>
-    <lastmod>2014-11-04T13:59:50-08:00</lastmod>
+    <lastmod>2014-11-22T15:13:00-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
