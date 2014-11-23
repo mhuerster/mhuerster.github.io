@@ -3,6 +3,7 @@ layout: post
 title:  "Welcome to San Francisco"
 date:   2014-10-07 20:39:40
 cover: cover.jpg
+description: I recently moved to San Francisco and started getting involved in the Ruby/Rails communities here. I'm also continuing to learn Angular.
 tags: angularjs javascript railsbridge opensource meetup personal
 ---
 
