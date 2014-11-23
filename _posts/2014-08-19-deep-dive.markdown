@@ -3,6 +3,7 @@ layout: post
 title:  "Deep Dive"
 date:   2014-08-19 20:42:30
 cover: cover.jpg
+description: I'm working on a really high-intensity, short-turnaround team project. I've learned a lot about mobile development (I'm working in Objective-C), as well as team dynamics and the importance of engineering empathy.
 tags: dbc mobile objective-c caching api json http agile engineering-empathy
 ---
 

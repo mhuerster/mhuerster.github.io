@@ -3,7 +3,7 @@ layout: post
 title:  "Intro to RSpec"
 date:   2014-08-04 21:21:32
 cover: cover.jpg
-description: Learning RSpec and using TDD to teach ActiveRecord to Ruby on Rails students
+description: I helped teach a workshop on ActiveRecord to a group of students learning Rails. I used RSpec to create a TDD exercise.
 tags: dbc rspec rails tdd teaching
 ---
 

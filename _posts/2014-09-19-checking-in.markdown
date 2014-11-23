@@ -3,6 +3,7 @@ layout: post
 title:  "Checking In"
 date:   2014-09-19 16:52:36
 cover: cover.jpg
+description: I'm doing more independent coding work lately - I've written a Ruby gem and started working on some open source projects.
 tags: personal opensource responsiveness gem fauxster
 ---
 
