@@ -35,6 +35,14 @@
         <br class="clear">
       </div>
 
+      <div>
+        <ul>
+          {% for category in site.categories %}
+            <li>{{ category | first }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
       <div class="sidebar" id="sidebar">
         <div class="posts">
           <ul class="posts-list">

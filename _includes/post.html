@@ -14,7 +14,16 @@
 
   <div class="post">
     {{ content }}
-    <span id="signature">Molly Huerster</span><br>
+    <span id="signature">Molly Huerster</span><br><br>
+  </div>
+  <div class="tags">
+    {{% if page.tags %}}
+      <p>
+        {% for tag in page.tags %}
+          <a href="{{ site.tags.tag }}">#{{ tag  }}</a>
+        {% endfor %}
+      </p>
+    {{% endif %}}
   </div>
   <div class="colophon">
     <p>
