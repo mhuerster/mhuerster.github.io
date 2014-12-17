@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http:mhuerster.github.io/2014/12/13/objectified/</loc>
+    <lastmod>2014-12-13T09:25:00-08:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http:mhuerster.github.io/2014/11/23/railsbridge/</loc>
     <lastmod>2014-11-23T03:44:00-08:00</lastmod>
     <priority>0.8</priority>
@@ -59,14 +65,14 @@
   
   <url>
     <loc>http:mhuerster.github.io/about/</loc>
-    <lastmod>2014-11-22T23:51:19-08:00</lastmod>
+    <lastmod>2014-12-17T10:23:47-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http:mhuerster.github.io/</loc>
-    <lastmod>2014-11-22T23:51:19-08:00</lastmod>
+    <lastmod>2014-12-17T10:23:47-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
