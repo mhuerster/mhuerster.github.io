@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Yosemite Will Mess up PostgreSQL"
+date:   2015-01-11 19:25:00
+cover: cover.jpg
+description: I upgraded my MacBook Air to Yosemite. Yosemite is mostly great, but created a minor problem with PostgreSQL.
+---
+
+I finally got around to upgrading to Yosemite over Christmas. For the most part, it's been working fine. (Embarrassing digression: I was most excited about being able to text non-iPhone numbers from my computer. Sometimes I'm just too lazy to pull out my phone.)
+
+However, after upgrading I had trouble using Postgres. I was getting the following error:
+
+{% highlight bash %}
+
+FATAL:  could not open directory "pg_tblspc": No such file or directory.
+
+{% endhighlight %}
+<br>
+Fortunately, there's a quick fix. [This StackOverflow post][SO] explains that the Yosemite install process removes some of the directories Postgres needs to run correctly. Manually re-creating the directories (including the suggested .keep files) and restarting Postgres solved the problem immediately.
+
+[SO]: http://stackoverflow.com/questions/25970132/pg-tblspc-missing-after-installation-of-os-x-yosemite
+
+Otherwise, though, Yosemite is great. iCloud is better than ever, and I can text my Android-using dad as much as I want.
