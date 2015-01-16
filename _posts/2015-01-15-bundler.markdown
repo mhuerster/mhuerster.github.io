@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Bundler"
+date:   "2015-01-15"
+cover: cover.jpg
+description:
+---
+
+I realized today that I reflexively prepend all my rake tasks with "bundle exec" (aliased to "be," or I would have carpal tunnel syndrome by now), but I don't actually know what "bundle exec" does.
+
+The short answer: <SHORT ANSWER HERE>
+
+The long answer:
+
+<LONG ANSWER HERE>

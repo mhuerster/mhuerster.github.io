@@ -1,0 +1,34 @@
+require 'time'
+
+desc 'create a new draft post'
+
+task :new_post do
+  title = ENV['TITLE']
+  slug = "#{Date.today}-#{title.downcase.gsub(/[^\w]+/, '-')}"
+
+  file = File.join(
+    File.dirname(__FILE__),
+    '_posts',
+    slug + '.markdown'
+  )
+
+  frontmatter = <<EOS
+  ---
+  layout: post
+  title:  "#{title}"
+  date:   "#{Date.today}"
+  cover: cover.jpg
+  description:
+  ---
+EOS
+
+  File.open(file, "w") do |f|
+    f.write(frontmatter)
+  end
+
+  system ("#{ENV['EDITOR']} #{file}")
+
+  # http://stackoverflow.com/questions/22687085/jekyll-simplest-possible-rakefile-to-create-new-post
+  # http://www.engr.uconn.edu/~rohitm/tutorials/crash2/slide-0-7.html
+
+end
