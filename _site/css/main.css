@@ -342,17 +342,3 @@ a:hover {
   font-family: 'Stalemate';
   width: 98%;
 }
-
-/*****************************************************************************/
-/*
-/* Resume
-/*
-/*****************************************************************************/
-
-.resume-header {
-  text-align: center;
-}
-.resume-table {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
