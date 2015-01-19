@@ -41,6 +41,13 @@
           <ul class="posts-list">
             
               <li class="post-link">
+                <a class="post-title" href="/2015/01/15/bundler/">
+                  <span class="post-date">15 Jan 2015</span>
+                  Bundler
+                </a>
+              </li>
+            
+              <li class="post-link">
                 <a class="post-title" href="/2015/01/11/yosemite/">
                   <span class="post-date">11 Jan 2015</span>
                   Yosemite Will Mess up PostgreSQL
@@ -142,28 +149,37 @@
       <img id="cover-photo" src="/images/cover.jpg">
     </div> -->
     <div id="info-container">
-      <h1 id="title">Yosemite Will Mess up PostgreSQL</h1>
-      <span id="date">11 Jan 2015</span>
+      <h1 id="title">Bundler</h1>
+      <span id="date">15 Jan 2015</span>
     </div>
   </div>
 
   <div class="post">
-    <p>I finally got around to upgrading to Yosemite over Christmas. For the most part, it’s been working fine. (Embarrassing digression: I was most excited about being able to text non-iPhone numbers from my computer. Sometimes I’m just too lazy to pull out my phone.)</p>
+    <p>I realized today that I reflexively preface all my rake tasks with “bundle exec” (aliased to “be,” or I would have carpal tunnel syndrome by now), but I don’t know exactly what “bundle exec” does.</p>
 
-<p>However, after upgrading I had trouble using Postgres. I was getting the following error:</p>
+<p><strong>The short answer:</strong></p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">FATAL:  could not open directory <span class="s2">&quot;pg_tblspc&quot;</span>: No such file or directory.</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">bundle <span class="nb">exec </span>rake db:migrate</code></pre></div>
 
 <p><br />
-Fortunately, there’s a quick fix. <a href="http://stackoverflow.com/questions/25970132/pg-tblspc-missing-after-installation-of-os-x-yosemite">This StackOverflow post</a> explains that the Yosemite install process removes some of the directories Postgres needs to run correctly. Manually re-creating the directories (including the suggested .keep files) and restarting Postgres solved the problem immediately.</p>
+means “run these migrations in the context of the current group of installed gems.”</p>
 
-<p>Otherwise, though, Yosemite is great. iCloud is better than ever, and I can text my Android-using dad as much as I want.</p>
+<p><strong>The (slightly) long(er) answer:</strong></p>
+
+<p>It turns out that Bundler is actually a much more narrowly focused tool than I imagined. Because I had been using it in conjunction with so many different kinds of tasks (database migrations, rails console, checking routes, etc.) I had gotten the idea that Bundler did something different for each one. In fact, Bundler is specifically for dependency management.</p>
+
+<div class="highlight inlined"><pre><code class="language-bash" data-lang="bash">bundle install</code></pre></div>
+<p><br />
+generates a Gemfile.lock, which stores all the project’s gems and their current versions. This is checked into git to track changes to the gems used. After that, prefacing commands with “bundle exec” makes sure that any necessary gems for that command will be available, assuming that they’re installed correctly. Much simpler than I thought!</p>
+
+<p>Read more about bundler <a href="http://bundler.io/rationale.html">here</a>.</p>
+
 
     <span id="signature">Molly Huerster</span><br>
   </div>
   <div class="colophon">
     <p>
-      <span id="pub-date">Published on 11 Jan 2015</span> <span class="separator">&bull;</span>
+      <span id="pub-date">Published on 15 Jan 2015</span> <span class="separator">&bull;</span>
       <span id="social">Find me on <a href="https://twitter.com/mhuerster">Twitter</a>!</span>
     </p>
   </div>
