@@ -155,14 +155,25 @@
   </div>
 
   <div class="post">
-    <p>I realized today that I reflexively prepend all my rake tasks with “bundle exec” (aliased to “be,” or I would have carpal tunnel syndrome by now), but I don’t actually know what “bundle exec” does.</p>
+    <p>I realized today that I reflexively preface all my rake tasks with “bundle exec” (aliased to “be,” or I would have carpal tunnel syndrome by now), but I don’t know exactly what “bundle exec” does.</p>
 
-<p>The short answer: <short answer="" here=""></short></p>
+<p><strong>The short answer:</strong></p>
 
-<p>The long answer:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">bundle <span class="nb">exec </span>rake db:migrate</code></pre></div>
 
-<long answer="" here="">
-</long>
+<p><br />
+means “run these migrations in the context of the current group of installed gems.”</p>
+
+<p><strong>The (slightly) long(er) answer:</strong></p>
+
+<p>It turns out that Bundler is actually a much more narrowly focused tool than I imagined. Because I had been using it in conjunction with so many different kinds of tasks (database migrations, rails console, checking routes, etc.) I had gotten the idea that Bundler did something different for each one. In fact, Bundler is specifically for dependency management.</p>
+
+<div class="highlight inlined"><pre><code class="language-bash" data-lang="bash">bundle install</code></pre></div>
+<p><br />
+generates a Gemfile.lock, which stores all the project’s gems and their current versions. This is checked into git to track changes to the gems used. After that, prefacing commands with “bundle exec” makes sure that any necessary gems for that command will be available, assuming that they’re installed correctly. Much simpler than I thought!</p>
+
+<p>Read more about bundler <a href="http://bundler.io/rationale.html">here</a>.</p>
+
 
     <span id="signature">Molly Huerster</span><br>
   </div>
