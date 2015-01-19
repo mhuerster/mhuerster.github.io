@@ -1,0 +1,265 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: #4a4a4a;
+  background-color: #fafbfc;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.85em;
+  overflow-y: auto;
+}
+
+a {
+  color: #8085C1;
+  text-decoration: none;
+  border: none;
+}
+
+a img {
+  outline: none;
+}
+
+a:hover {
+  color: #555;
+  border: none;
+}
+
+.separator {
+  color: #555;
+}
+
+/*****************************************************************************/
+/*
+/* Home
+/*
+/*****************************************************************************/
+#logo {
+  display: inline;
+  width: 10%;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+#site-title {
+  display: inline-block;
+  font-family: 'Vollkorn', sans-serif;
+  text-align: center;
+  font-size: 9vw;
+  vertical-align: middle;
+  width: 84%;
+  position: relative;
+  line-height: 100%;
+}
+.clear {
+  font-size: 6em;
+  clear: both;
+}
+
+.posts a {
+  color: #444;
+}
+
+.posts a:hover {
+  color: #777;
+}
+
+.posts-list {
+  list-style-type: none;
+}
+
+.posts-list li {
+  text-align: center;
+  line-height: 1.75em;
+}
+
+/*****************************************************************************/
+/*
+/* Site
+/*
+/*****************************************************************************/
+
+.title {
+  display: inline-block;
+  text-align: center;
+  line-height: 25px;
+}
+
+.site-header {
+  background-color: #9FCEFA;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 20%;
+  height: auto;
+  border: 1px solid #e7e7e7;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.footer {
+  font-size: 0.95em;
+  border-top: 1px solid #e7e7e7;
+  font-family: 'Josefin Slab', serif;
+  padding-top: 1.25em;
+  padding-bottom: 1.5em;
+  overflow: hidden;
+  float: center;
+  text-align: center;
+}
+
+/*****************************************************************************/
+/*
+/* Posts
+/*
+/*****************************************************************************/
+
+#cover-photo-container,
+#info-container {
+  display: block;
+  margin-bottom: 2em;
+}
+
+#info-container {
+  margin-top: 3em;
+}
+
+#title {
+  font-family: 'Lato';
+  color: #4a4a4a;
+  margin-bottom: 1em;
+  font-size: 2.618em;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
+.post {
+  line-height: 24px;
+  font-family: 'Vollkorn', serif;
+  margin-right: 3%;
+  margin-top: 0.75em;
+  clear: both;
+}
+
+.post h2 {
+  margin-top: 1.25em;
+  margin-left: -0.5em;
+  margin-bottom: 1.25em;
+}
+
+.post a,
+#about a {
+  font-weight: bold;
+}
+
+.post a:hover {
+  border: none;
+}
+
+/* standard */
+.post pre {
+  border: 1px solid #ddd;
+  background-color: #eef;
+  padding: 0 .4em;
+}
+
+.post p {
+  font-size: 16px;
+  margin-bottom: 1.45em;
+  text-align: justify;
+}
+
+.post ul, .post ol {
+  margin-left: 2.35em;
+  margin-bottom: 1.25em;
+}
+
+.post code {
+  border: 1px solid #ddd;
+  background-color: #eef;
+  padding: 0 .2em;
+}
+
+.post pre code {
+  border: none;
+}
+
+/* terminal */
+.post pre.terminal {
+  border: 1px solid #000;
+  background-color: #333;
+  color: #FFF;
+}
+
+.post pre.terminal code {
+  background-color: #333;
+}
+
+/*****************************************************************************/
+/*
+/* Sidebar and Content
+/*
+/*****************************************************************************/
+
+.sidebar,
+.content {
+  vertical-align: top;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidebar {
+  float: left;
+  width: 25%;
+  padding-left: auto;
+  padding-right: auto;
+  border-right: 1px solid #e7e7e7;
+}
+
+.content {
+  width: 50%;
+}
+
+.content p {
+  line-height: 150%;
+}
+
+.post-link {
+  margin-bottom: 0.75em;
+  margin-right: 10%;
+}
+
+.post-title {
+  font-family: 'Lato', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 1.25em;
+  text-transform: uppercase;
+}
+
+.post-date {
+  color: #8a8a8a;
+  font-family: 'Forum', serif;
+  font-weight: 600;
+  font-size: 0.65em;
+  display: block;
+  text-transform: uppercase;
+}
