@@ -29,12 +29,22 @@
   <body>
     <div class="site">
       <div class="site-header">
-          
-        <a href="/"><img id="logo" src="/images/logo.jpeg"></a>
-        
-        <span id="site-title">MOLLY HUERSTER</span>
-        <br class="clear">
-      </div>
+        <div class="header-logo">
+          <img id="logo" src="/images/logo.jpeg">
+        </div>  <!-- close header logo -->
+        <div class="header-text">
+          <div id="site-title">molly.huerster</div>
+          <!-- <br class="clear"> -->
+          <div class="header-links">
+            <a href="/" class="header-link">home</a> <span class="separator">&bull;</span>
+            <a href="/about" class="header-link">about</a> <span class="separator">&bull;</span>
+            <a href="/resume" class="header-link">resume</a> <span class="separator">&bull;</span>
+            <a href="https://twitter.com/mhuerster" target="_blank" class="header-link">twitter</a> <span class="separator">&bull;</span>
+            <a href="https://github.com/mhuerster" target="_blank" class="header-link">github</a> <span class="separator">&bull;</span>
+            <a href="http://www.linkedin.com/in/maryhuerster/" target="_blank" class="header-link">linkedin</a>
+          </div> <!-- close header links -->
+        </div> <!-- close header text -->
+      </div> <!-- close site header -->
 
       <div class="sidebar" id="sidebar">
         <div class="posts">
@@ -48,15 +58,6 @@
               </li>
             {% endfor %}
           </ul>
-        </div>
-        <div class="footer">
-          <span id="footer-links">
-            <a href="{{ site.pages.first.url }}" class="footer-link">About</a> <span class="separator">&bull;</span>
-            <a href="https://twitter.com/mhuerster" class="footer-link">Twitter</a> <span class="separator">&bull;</span>
-            <a href="https://github.com/mhuerster" class="footer-link">GitHub</a> <span class="separator">&bull;</span>
-            <a href="/resume" class="footer-link">Resume</a> <span class="separator">&bull;</span>
-            <a href="http://www.linkedin.com/in/maryhuerster/">LinkedIn</a>
-          </span>
         </div>
       </div>
 
