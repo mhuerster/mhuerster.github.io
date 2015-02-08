@@ -7,7 +7,13 @@
       <meta name="viewport" content="width=device-width">
       
         <meta name="description" content="My name is Molly Huerster and I'm a software developer living in San Francisco. I mostly code in Ruby on Rails, with a little mobile stuff. When I'm not coding, I'm probably reading or cooking or exploring San Francisco. You might know me a Mary Huerster (especially if you've emailed me!).">
+        <meta name="twitter:description" content="My name is Molly Huerster and I'm a software developer living in San Francisco. I mostly code in Ruby on Rails, with a little mobile stuff. When I'm not coding, I'm probably reading or cooking or exploring San Francisco. You might know me a Mary Huerster (especially if you've emailed me!).">
       
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:url" content="/page2/">
+      <meta name="twitter:site" content="@mhuerster">
+      <meta name="twitter:title" content="Home">
+      <meta name="twitter:domain" content="http://www.mhuerster.com">
       <!-- syntax highlighting CSS -->
       <link rel="stylesheet" href="/css/syntax.css">
       
@@ -49,13 +55,6 @@
       <div class="sidebar" id="sidebar">
         <div class="posts">
           <ul class="posts-list">
-            
-              <li class="post-link">
-                <a class="post-title" href="/2015/02/04/custom-social-icons/">
-                  <span class="post-date">04 Feb 2015</span>
-                  Custom Social Icons
-                </a>
-              </li>
             
               <li class="post-link">
                 <a class="post-title" href="/2015/01/15/bundler/">
@@ -157,19 +156,37 @@
       <img id="cover-photo" src="/images/cover.jpg">
     </div> -->
     <div id="info-container">
-      <h1 id="title">Custom Social Icons</h1>
-      <span id="date">04 Feb 2015</span>
+      <h1 id="title">Bundler</h1>
+      <span id="date">15 Jan 2015</span>
     </div>
   </div>
 
   <div class="post">
-    <p>I recently had to get a set of custom social media sharing icons up and running. I ended up doing more research/legwork than seemed to be really necessary, so here’s a quick cheat sheet for Facebook, Twitter and email. (Scroll down for links to gists.)</p>
+    <p>I realized today that I reflexively preface all my rake tasks with “bundle exec” (aliased to “be,” or I would have carpal tunnel syndrome by now), but I don’t know exactly what “bundle exec” does.</p>
+
+<p><strong>The short answer:</strong></p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">bundle <span class="nb">exec </span>rake db:migrate</code></pre></div>
+
+<p><br />
+means “run these migrations in the context of the current group of installed gems.”</p>
+
+<p><strong>The (slightly) long(er) answer:</strong></p>
+
+<p>It turns out that Bundler is actually a much more narrowly focused tool than I imagined. Because I had been using it in conjunction with so many different kinds of tasks (database migrations, rails console, checking routes, etc.) I had gotten the idea that Bundler did something different for each one. In fact, Bundler is specifically for dependency management.</p>
+
+<div class="highlight inlined"><pre><code class="language-bash" data-lang="bash">bundle install</code></pre></div>
+<p><br />
+generates a Gemfile.lock, which stores all the project’s gems and their current versions. This is checked into git to track changes to the gems used. After that, prefacing commands with “bundle exec” makes sure that any necessary gems for that command will be available, assuming that they’re installed correctly. Much simpler than I thought!</p>
+
+<p>Read more about bundler <a href="http://bundler.io/rationale.html">here</a>.</p>
+
 
     <span id="signature">Molly Huerster</span><br>
   </div>
   <div class="colophon">
     <p>
-      <span id="pub-date">Published on 04 Feb 2015</span> <span class="separator">&bull;</span>
+      <span id="pub-date">Published on 15 Jan 2015</span> <span class="separator">&bull;</span>
       <span id="social">Find me on <a href="https://twitter.com/mhuerster">Twitter</a>!</span>
     </p>
   </div>
@@ -203,6 +220,6 @@
 
 
     </div>
-    
+    <script type="text/javascript" src="../scripts/facebook.js"></script>  
   </body>
 </html>
