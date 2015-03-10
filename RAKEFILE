@@ -13,13 +13,13 @@ task :new_post do
   )
 
   frontmatter = <<EOS
-  ---
-  layout: post
-  title:  "#{title}"
-  date:   "#{Date.today}"
-  cover: cover.jpg
-  description:
-  ---
+---
+layout: post
+title:  "#{title}"
+date:   "#{Date.today}"
+cover: cover.jpg
+description:
+---
 EOS
 
   File.open(file, "w") do |f|
