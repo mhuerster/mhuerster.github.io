@@ -1,77 +1,81 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Molly Huerster - {{ page.title }}</title>
-      <meta name="viewport" content="width=device-width">
-      {% if page.description %}
-        <meta name="description" content="{{ page.description }}">
-        <meta name="twitter:description" content="{{ page.description }}">
-      {% endif %}
-      <meta name="twiter:image" content="{{ site.url }}/images/logo.jpeg">
-      <meta name="twitter:card" content="summary">
-      <meta name="twitter:url" content="{{ page.url }}">
-      <meta name="twitter:site" content="@mhuerster">
-      <meta name="twitter:title" content="{{ page.title }}">
-      <meta name="twitter:domain" content="http://www.mhuerster.com">
-      <!-- syntax highlighting CSS -->
-      <link rel="stylesheet" href="/css/syntax.css">
-      
-      <!-- Responsive CSS -->
-      <link rel="stylesheet" href="/css/responsive.css">
 
-      <!-- Custom CSS -->
-      <link rel="stylesheet" href="/css/main.css">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Molly Huerster - {{ page.title }}</title>
+  <meta name="viewport" content="width=device-width"> {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  <meta name="twitter:description" content="{{ page.description }}"> {% endif %}
+  <!-- twitter info -->
+  <meta name="twiter:image" content="{{ site.url }}/images/logo.jpeg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="{{ page.url }}">
+  <meta name="twitter:site" content="@mhuerster">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:domain" content="http://www.mhuerster.com">
+  <!-- facebook info -->
+  <meta name="og:url" content="{{ page.url }}">
+  <meta name="og:title" content="{{ page.title }}">
+  <meta name="og:description" content="{{ page.description }}">
+  {% comment %}
+    <meta name="og:image" content="TODO: include default image">
+  {% endcomment %}
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/css/syntax.css">
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="/css/responsive.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/main.css">
+  <!-- Google Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Forum' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Stalemate' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:700' rel='stylesheet' type='text/css'>
+</head>
 
-
-      <!-- Google Fonts -->
-      <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
-      <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
-      <link href='http://fonts.googleapis.com/css?family=Forum' rel='stylesheet' type='text/css'>
-      <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-      <link href='http://fonts.googleapis.com/css?family=Stalemate' rel='stylesheet' type='text/css'>
-      <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:700' rel='stylesheet' type='text/css'>
-  </head>
-  <body>
-    <div class="site">
-      <div class="site-header">
-        <div class="header-logo">
-          <img id="logo" src="/images/logo.jpeg">
-        </div>  <!-- close header logo -->
-        <div class="header-text">
-          <div id="site-title">molly.huerster()</div>
-          <!-- <br class="clear"> -->
-          <div class="header-links">
-            <a href="/" class="header-link">home</a> <span class="separator">&bull;</span>
-            <a href="/about" class="header-link">about</a> <span class="separator">&bull;</span>
-            <a href="/resume" class="header-link">resume</a> <span class="separator">&bull;</span>
-            <a href="https://twitter.com/mhuerster" target="_blank" class="header-link">twitter</a> <span class="separator">&bull;</span>
-            <a href="https://github.com/mhuerster" target="_blank" class="header-link">github</a> <span class="separator">&bull;</span>
-            <a href="http://www.linkedin.com/in/maryhuerster/" target="_blank" class="header-link">linkedin</a>
-          </div> <!-- close header links -->
-        </div> <!-- close header text -->
-      </div> <!-- close site header -->
-
-      <div class="sidebar" id="sidebar">
-        <div class="posts">
-          <ul class="posts-list">
-            {% for post in site.posts %}
-              <li class="post-link">
-                <a class="post-title" href="{{ post.url }}">
-                  <span class="post-date">{{ post.date | date_to_string }}</span>
-                  {{ post.title }}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
+<body>
+  <div class="site">
+    <div class="site-header">
+      <div class="header-logo">
+        <img id="logo" src="/images/logo.jpeg">
       </div>
-
-
-        {{ content }}
-
+      <!-- close header logo -->
+      <div class="header-text">
+        <div id="site-title">molly.huerster()</div>
+        <!-- <br class="clear"> -->
+        <div class="header-links">
+          <a href="/" class="header-link">home</a> <span class="separator">&bull;</span>
+          <a href="/about" class="header-link">about</a> <span class="separator">&bull;</span>
+          <a href="/resume" class="header-link">resume</a> <span class="separator">&bull;</span>
+          <a href="https://twitter.com/mhuerster" target="_blank" class="header-link">twitter</a> <span class="separator">&bull;</span>
+          <a href="https://github.com/mhuerster" target="_blank" class="header-link">github</a> <span class="separator">&bull;</span>
+          <a href="http://www.linkedin.com/in/maryhuerster/" target="_blank" class="header-link">linkedin</a>
+        </div>
+        <!-- close header links -->
+      </div>
+      <!-- close header text -->
     </div>
-    <script type="text/javascript" src="../scripts/facebook.js"></script>  
-  </body>
+    <!-- close site header -->
+    <div class="sidebar" id="sidebar">
+      <div class="posts">
+        <ul class="posts-list">
+          {% for post in site.posts %}
+          <li class="post-link">
+            <a class="post-title" href="{{ post.url }}">
+              <span class="post-date">{{ post.date | date_to_string }}</span> {{ post.title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {{ content }}
+  </div>
+  <script type="text/javascript" src="../scripts/facebook.js"></script>
+</body>
+
 </html>
