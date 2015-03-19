@@ -6,6 +6,6 @@ cover: cover.jpg
 description:
 ---
 
-I recently had to get a set of custom social media sharing icons up and running. It's not technically difficult at all, but I ended up doing more research/legwork than seemed to be really necessary, so here's a quick cheat sheet for Facebook, Twitter and email. (Scroll down for links to gists.)
+Thanks to [PSDDude][psddude] for creating this pretty set of social media icons for free!
 
-FYI: The gists are in Haml, but I use Liquid for this blog.
+[psddude]: http://www.psd-dude.com/
