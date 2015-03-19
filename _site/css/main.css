@@ -9,7 +9,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   -webkit-font-smoothing: antialiased;
@@ -42,12 +43,12 @@ a:hover {
 .separator {
   color: #555;
 }
-
 /*****************************************************************************/
 /*
 /* Home
 /*
 /*****************************************************************************/
+
 .site-header {
   background-color: #9FCEFA;
   background-repeat: no-repeat;
@@ -58,6 +59,7 @@ a:hover {
   padding-top: 1em;
   padding-bottom: 1em;
 }
+
 .header-logo {
   margin-left: 1%;
   float: left;
@@ -65,16 +67,19 @@ a:hover {
   left: 0;
   max-width: 15%;
 }
+
 #logo {
   display: block;
   max-width: 100%;
   border-radius: 50%;
 }
+
 .header-text {
   display: inline-block;
   width: 83%;
   margin-right: auto;
 }
+
 #site-title {
   font-family: 'Lato', sans-serif;
   text-align: center;
@@ -85,6 +90,7 @@ a:hover {
   width: 84%;
   line-height: 100%;
 }
+
 .clear {
   font-size: 6em;
   clear: both;
@@ -97,12 +103,14 @@ a:hover {
   margin-right: auto;
   margin-top: 1em;
 }
-a.header-link{
+
+a.header-link {
   text-align: center;
   font-family: "Lato", "Hevletica", sans-serif;
   color: #4a4a4a;
   font-size: 1.5em;
 }
+
 a.header-link:hover {
   text-decoration: underline;
 }
@@ -123,8 +131,6 @@ a.header-link:hover {
   text-align: center;
   line-height: 1.75em;
 }
-
-
 /*****************************************************************************/
 /*
 /* Site
@@ -168,7 +174,6 @@ a.header-link:hover {
   float: center;
   text-align: center;
 }
-
 /*****************************************************************************/
 /*
 /* Posts
@@ -226,8 +231,8 @@ a.header-link:hover {
 .post a:hover {
   border: none;
 }
-
 /* standard */
+
 .post pre {
   border: 1px solid #ddd;
   background-color: #eef;
@@ -240,7 +245,8 @@ a.header-link:hover {
   text-align: justify;
 }
 
-.post ul, .post ol {
+.post ul,
+.post ol {
   margin-left: 2.35em;
   margin-bottom: 1.25em;
 }
@@ -254,8 +260,8 @@ a.header-link:hover {
 .post pre code {
   border: none;
 }
-
 /* terminal */
+
 .post pre.terminal {
   border: 1px solid #000;
   background-color: #333;
@@ -266,6 +272,29 @@ a.header-link:hover {
   background-color: #333;
 }
 
+.social-sharing {
+  display: inline-block;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+  background-size: cover;
+}
+
+.twitter {
+  background-image: url("/images/twitter.png");
+}
+
+.facebook {
+  background-image: url("/images/facebook.png");
+}
+
+.email {
+  background-image: url("/images/mail.png");
+}
 /*****************************************************************************/
 /*
 /* Sidebar and Content
@@ -333,7 +362,6 @@ a.header-link:hover {
 #sidebar-button:hover {
   opacity: 0.7;
 }
-
 /*****************************************************************************/
 /*
 /* Colophon
@@ -352,18 +380,20 @@ a.header-link:hover {
   font-size: 0.95em;
   color: #777;
 }
+
 #signature {
   font-family: 'Stalemate', serif;
   font-size: 2.25em;
 }
-
 /*****************************************************************************/
 /*
 /* Comments
 /*
 /*****************************************************************************/
+
 #disqus_thread {
   /*background: red;*/
+  
   font-family: 'Stalemate';
   width: 98%;
 }
