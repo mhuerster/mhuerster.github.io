@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Custom Social Icons"
-date:   "2015-02-04"
+date:   "2015-03-19"
 cover: cover.jpg
 description:
 ---
