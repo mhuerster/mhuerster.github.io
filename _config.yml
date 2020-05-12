@@ -1,25 +1,65 @@
-# Site settings
 title: Molly Huerster
-email: mary.huerster@gmail.com
-description: "I'm a full stack developer and recent transplant to San Francisco. Life is good."
-baseurl: ""
-url: "http:www.mhuerster.com"
-twitter_username: mhuerster
-github_username:  mhuerster
+logo:  # you can add own logo.
+description: New York-based software engineer
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+
+# Author Settings
+author:
+  name: Molly Huerster
+  image: '/assets/img/profile.jpg'
+  job: Software Engineer
+  bio: Currently at Square
+  email: molly@mhuerster.com
+
+# Contact links
+contact:
+  - name: LinkedIn
+    link: https://www.linkedin.com/in/maryhuerster/
+  - name: GitHub
+    link: https://github.com/mhuerster
+  - name: Resume
+    link: /assets/docs/resume.pdf
+
+
+# Comment Section (Disqus)
+disqus-identifier: mhuerster
+
+
+# Google Analytics
+google-analytics:  UA-52147811-1
+
 
 # Build settings
 markdown: kramdown
 permalink: pretty
-paginate: 10
-comments :
-  provider : disqus
-  disqus :
-    short_name : mhuerster
-analytics :
-  provider : google
-  google : 
-      tracking_id : 'UA-52147811-1'
-
-# Gemfile
-gems:
+plugins:
   - jekyll-sitemap
+  - jekyll/tagging
+
+# Pages Path
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext
+
+include:
+  - _pages
+
+# Tags
+tag_page_dir:         tag
+tag_page_layout:      tag-page
+tag_permalink_style:  pretty
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor

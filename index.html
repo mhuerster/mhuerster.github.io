@@ -1,9 +1,14 @@
 ---
 layout: default
-title: Home
-description: My name is Molly Huerster and I'm a software developer living in San Francisco. I mostly code in Ruby on Rails, with a little mobile stuff. When I'm not coding, I'm probably reading or cooking or exploring San Francisco. You might know me a Mary Huerster (especially if you've emailed me!).
 ---
 
-{% assign page = site.posts.first %}
-{% assign content = page.content %}
-{% include post.html %}
+<div class="container">
+  <img src="{{site.baseurl}}{{site.author.image}}" alt="{{site.author.name}}" class="author__img">
+      <h1 class="author__job">{{ site.author.job }}</h1>
+      <p class="author__bio">{{ site.author.bio }}</p>
+      <div class="author__more">
+        <a href="mailto:{{site.author.email}}?subject=Hello%20%F0%9F%91%8B" class="say-hello">Say hello</a>
+        <a href="{{site.baseurl}}/about/" class="know-more">Know More</a>
+      </div>
+    </div>
+</div>
